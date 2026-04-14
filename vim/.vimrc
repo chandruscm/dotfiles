@@ -1,37 +1,32 @@
-no <up> <Nop>
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
+" Disable arrow keys
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
 
-ino <up> <Nop>
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
 
-vno <up> <Nop>
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
+vnoremap <Up> <Nop>
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
 
-set encoding=UTF-8
+set encoding=utf-8
 set tabstop=2
 set ai
 set number
-colorscheme rainbow_neon
-
-syntax on
-
-map <C-n> :NERDTreeToggle<CR>
-
-execute pathogen#infect()
-call pathogen#helptags()
-
 set backspace=indent,eol,start
+syntax on
 
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 colorscheme nord
